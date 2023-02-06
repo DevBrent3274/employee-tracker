@@ -5,18 +5,18 @@ VALUES
     ('Pro Shop'),
     ('Engineering');
 
-INSERT INTO role(title, salary, department_id)
+INSERT INTO roles(title, salary, department_id)
 VALUES
-    ('Executive Chef', 100000, 1),
-    ('Pasrty Chef', 55000, 1),
-    ('Head Golf Pro', 100000, 2),
-    ('Assistent Pro', 45000, 2),
-    ('Head Grounds Keeper', 90000, 3),
-    ('Grounds Crew', 40000, 3),
-    ('Head Engineer', 60000, 4),
-    ('Roundsman', 45000, 4);
+    ('Executive Chef', 100000.00, 1),
+    ('Pasrty Chef', 55000.00, 1),
+    ('Head Golf Pro', 100000.00, 2),
+    ('Assistent Pro', 45000.00, 2),
+    ('Head Grounds Keeper', 90000.00, 3),
+    ('Grounds Crew', 40000.00, 3),
+    ('Head Engineer', 60000.00, 4),
+    ('Roundsman', 45000.00, 4);
 
-INSERT INTO employee(first_name, last_name, role_id, manager_id)
+INSERT INTO employee(first_name, last_name, role_id)
 VALUES
     ('Adam', 'Becker', 1),
     ('Jenny', 'Snyder', 2),

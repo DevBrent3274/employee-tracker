@@ -1,7 +1,7 @@
 // INSTALL DEPENDENCIES
 const mysql = require("mysql2");
 const inquirer = require("inquirer");
-const conTable = require(console.table);
+const conTable = require("console.table");
 // CREATING CONNECTION TO SERVER
 const db = mysql.createConnection({
   host: "localhost",
