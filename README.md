@@ -20,8 +20,8 @@ Inquirer, console.table
 ## Mock Up
 ![Screen Shot](/assets/screenshot.png)
 
-## [Video Walk Through](https://googledrive/####) 
-Not Linked Yet
+## [Video Walk Through](https://drive.google.com/file/d/1nXQAxjLQKBjU4JH66A2jnU1YI-i_plsm/view) 
+
 
 ## Credits
 
