@@ -30,8 +30,14 @@ const askNewEmployee = [
   "Who is their manager?",
 ];
 
+
+
+//const roleQuery =  'SELECT * FROM roles; SELECT CONCAT (e.first_name," ",e.last_name) AS full_name FROM employee e;';
+
 const roleQuery =
-  'SELECT * FROM roles; SELECT CONCAT (e.first_name," ",e.last_name) AS full_name FROM employee e';
+  `SELECT r.*, CONCAT( e.first_name," ", e.last_name) AS full_name FROM employee e
+  INNER JOIN roles r
+    ON e.role_id = r.id`
 
 const managerQuery = `SELECT CONCAT (e.first_name," ",e.last_name) AS full_name,r.title, d.name FROM employee e INNER JOIN roles r ON r.id = e.role_id INNER JOIN department d ON d.did =r.department_id WHERE name = "Management";`
 
@@ -145,7 +151,8 @@ const addEmployee = () => {
           // A FX in the choices creates a new array from results (all from roles table) loops and returns
           // the array of titles
           choices: function () {
-            let choiceArr = results[0].map((choice) => choice.title);
+            //console.log(results);
+            let choiceArr = results.map((choice) => choice.title);
             return choiceArr;
           },
           //   asking what the role is?
@@ -157,9 +164,11 @@ const addEmployee = () => {
           // A FX that creates a new array from employee table, the concatenated first and last name
           // and returns an array of the full name
           choices: function () {
-            let choiceArr = results[1].map((choice) => choice.full_name);
+            let choiceArr = results.map((choice) => choice.full_name);
+            console.log(results.length)
             return choiceArr;
           },
+
           // asking who is their manager
           message: askNewEmployee[3],
         },
